@@ -1,7 +1,6 @@
-package com.basavarajpatil.interfaces;
+package com.basavarajpatil;
 
 public interface Encoder {
 
     String encode(String data);
-
 }
