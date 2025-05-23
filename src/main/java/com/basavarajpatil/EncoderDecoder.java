@@ -7,6 +7,8 @@ public class EncoderDecoder implements Encoder, Decoder {
     private final Map<String, String> idToTokenMap = new  HashMap<>();
     private final Map<String, String> tokenToIdMap = new  HashMap<>();
     private final String SEPARATOR = " ";
+
+
     @Override
     public String decode(String input) {
         StringBuilder output = new StringBuilder();
@@ -25,7 +27,7 @@ public class EncoderDecoder implements Encoder, Decoder {
         Tokenizer tokenizer = new Tokenizer();
         StringBuilder encoded = new StringBuilder();
 
-        List<String> tokens = tokenizer.createTokens(data);
+        List<String> tokens = tokenizer.createTokens(data.toLowerCase());
         for (String token : tokens) {
             if (this.tokenToIdMap.containsKey(token)) {
             encoded.append(this.tokenToIdMap.get(token));

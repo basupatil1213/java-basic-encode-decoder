@@ -14,10 +14,8 @@ public class App {
 
         App app = new App();
 
-//        Training
         app.train_data();
 
-//        Encode and Decode
         app.encode_decoder();
 
     }
